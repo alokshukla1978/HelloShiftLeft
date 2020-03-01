@@ -43,4 +43,4 @@ curl -XPOST "https://api.github.com/repos/$GITHUB_REPO/issues/$PULL_REQUEST/comm
   -H "Content-Type: application/json" \
   -d "{\"body\": \"$PR_COMMENT\"}"
 
-sl check-analysis --app "$GITHUB_PROJECT" --branch "$GITHUB_BRANCH"
+build-result=$(sl check-analysis --app "$GITHUB_PROJECT" --branch "$GITHUB_BRANCH")
